@@ -3,13 +3,16 @@ const fs = require('fs');
 /**
  * Approaches:
  * 1. Walk thru array until we find a symbol
- *   check adjacencies for exactly two numbers, if true, sum gear ratio
+ * - check adjacencies for exactly two numbers, if true, then find all digits of the numbers spotted 
+ * - and sum to gear ratio
  * 
  * 2. Walk thru array, keeping track of numbers
  * - once number ends, backtrack and search for symbols
  * - hash symbols using the the coords as a key and number as a val
  * - then find gear rations by iterating through the map
- 
+ *
+ * Chose 2 because it builds off the existing algorithm in 3-1, 
+ * and I didn't want to "uncover" all the digits once we found one.
  */
 (function () {
   const isNumber = (any) => Number.isFinite(Number(any));
