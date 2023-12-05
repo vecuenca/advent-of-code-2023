@@ -80,12 +80,10 @@ const fs = require('fs');
     }
   }
 
-  console.log(`Hashed gears ${JSON.stringify(Array.from(map.entries()))}`);
+  console.debug(`Hashed gears ${JSON.stringify(Array.from(map.entries()))}`);
 
   let sum = 0;
-  console.log(map.values());
   for (let val of map.values()) {
-    console.log(val)
     if (val.length !== 2) {
       continue;
     }
